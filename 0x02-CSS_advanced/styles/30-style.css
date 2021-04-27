@@ -142,7 +142,7 @@ a:link {
 }
 
 a:visited {
-    font-style: Italicize;
+    font-style: italic;
 }
 
 a:hover {
