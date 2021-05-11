@@ -7,9 +7,9 @@
 }
 
 body {
-    @include margin(10);
+    @include margin(10px);
 }
 
 div {
-    @include margin(15);
+    @include margin(15px);
 }
