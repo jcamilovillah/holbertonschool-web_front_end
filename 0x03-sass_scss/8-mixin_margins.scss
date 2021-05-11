@@ -1,0 +1,15 @@
+/* Margin mixin */
+@mixin margin($margin) {
+    margin: {
+        left: $margin;
+        right: $margin;
+    }
+}
+
+body {
+    @include margin(10);
+}
+
+div {
+    @include margin(15);
+}
