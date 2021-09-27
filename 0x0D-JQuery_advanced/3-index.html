@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 3</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createFamilyTree() {
+                $("body").append("<table>")
+                        .append("<tr>")
+                        .append("<tr>")
+                        .append("<tr>")
+                        .append("<tr>")
+
+                        .find("tr")
+                        .eq(0)
+                        .append("<th>").find("th").first().text("Firstname").end().end()
+                        .append("<th>").find("th").last().text("Lastname").end().end()
+                        .end()
+
+                        .eq(1)
+                        .append("<td>").find("td").first().text("Guillaume").end().end()
+                        .append("<td>").find("td").last().text("Salva").end().end()
+                        .end()
+
+                        .eq(2)
+                        .append("<td>").find("td").first().text("Paulette").end().end()
+                        .append("<td>").find("td").last().text("Salva").end().end()
+                        .end()
+
+                        .eq(3)
+                        .append("<td>").find("td").first().text("Antoine").end().end()
+                        .append("<td>").find("td").last().text("Salva");
+            }
+            createFamilyTree();
+        </script>  
+        <!-- 
+        <table>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th> 
+            </tr>
+            <tr>
+              <td>Guillaume</td>
+              <td>Salva</td>
+            </tr>
+            <tr>
+              <td>Paulette</td>
+              <td>Salva</td>
+            </tr>
+            <tr>
+              <td>Antoine</td>
+              <td>Salva</td>
+            </tr>
+          </table>
+         -->
+    </body>
+</html>
