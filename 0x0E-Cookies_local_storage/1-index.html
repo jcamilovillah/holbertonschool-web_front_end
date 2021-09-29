@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-index</title>
+
+    <script type="application/javascript">
+        function setCookies() {
+
+            var d = new Date();
+            // 10 days * 24 hours (per day) * 60 minutes (per hour) * 60 seconds (per minute) * 1000)
+            d.setTime(d.getTime() + (10*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            // console.log("VENCIMIENTO: " + expires);
+            document.cookie = "firstname=" + document.getElementById("fname").value + ";" + expires + ";path=/";
+            document.cookie = "email=" + document.getElementById("email").value + ";" + expires + ";path=/";
+        }
+
+        function showCookies() {
+            let cookies =  document.cookie.split(";");
+            let p = document.createElement("p");
+            // consoleto print value of cookies console.log("cookies: "+ cookies);
+            let txt = document.createTextNode("Cookies: " + cookies[0].split("=")[1] + ", " + cookies[1].split("=")[1]);
+
+            p.appendChild(txt);
+            document.body.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Login to the website</h1>
+
+    <input type="text" placeholder="FirstName" id="fname">
+    <input type="text" placeholder="Email" id="email">
+
+    <button type="button" id="btn" onclick="setCookies()">Log me in</button>
+
+    <h1>Cookies</h1>
+    <button type="button" id="show_btn" onclick="showCookies()">Show the cookies</button>
+</body>
+</html>
